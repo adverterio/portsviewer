@@ -6,13 +6,13 @@ def get_ports_data():
     import subprocess
     p = subprocess.Popen(['netstat', '-ltup'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()
-    data1 = stdout.decode().split('\n')
-    data2 = []
-    for line in range(1, len(data1)):
-        newline = data1[line].split()
-        data2.append(newline)
-        data2[0] = ['Proto', 'Recv-Q', 'Send-Q', 'Local Address', 'Foreign Address', 'State', 'PID/Program name']
-    return data2
+    console_data = stdout.decode().split('\n')
+    formated_data = []
+    for line in range(1, len(console_data)):
+        newline = console_data[line].split()
+        formated_data.append(newline)
+    formated_data[0] = ['Proto', 'Recv-Q', 'Send-Q', 'Local Address', 'Foreign Address', 'State', 'PID/Program name']
+    return formated_data
 
 @app.route('/')
 def index():
