@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ports</title>
+</head>
+<body>
+
+      <table border="1" cellpadding="7" cellspacing="0"
+        {% for port in portsdata %}
+           <tr>
+             {% for col in port %}
+             <td align="center">{{ col }}</td>
+             {% endfor %}
+           </tr>
+        {% endfor %}
+      </table>
+
+</body>
+</html>

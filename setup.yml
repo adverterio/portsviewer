@@ -1,0 +1,9 @@
+version: '2'
+services:
+  portsviewer:
+    build: .
+    container_name: portsviewer
+    ports:
+      - "5000:5000"
+
+
