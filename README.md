@@ -1,5 +1,4 @@
 # Portsviewer
-T-Systems test task
 
 Used:
 - Python 3.6
